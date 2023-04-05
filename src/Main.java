@@ -9,5 +9,14 @@ public class Main {
         dog1.makeVoice();
         dog2.makeVoice("gav", 10);
         dog3.makeVoice("gav");
+        Flower flower = new Flower("Lilac", new LongevityOfPlants(100, "years"), 4);
+        Rose kenyanRose = new Rose("Frutteto", new LongevityOfPlants(2, "weeks"), 45, TypesOfRoses.HYBRID_TEA);
+        Rose kordana = new Rose("Kordana", new LongevityOfPlants(28, "days"), 120, TypesOfRoses.MINIATURE);
+        System.out.println(flower.printInfo());
+        System.out.println(kenyanRose.printInfo());
+        System.out.println(kordana.printInfo());
+        System.out.println(flower.bloom());
+        System.out.println(kenyanRose.bloom(Seasons.SUMMER));
+        System.out.println(kordana.bloom(Seasons.SPRING, new LongevityOfPlants(28, "days")));
     }
 }
